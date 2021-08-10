@@ -1,9 +1,12 @@
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
+const config = require('./config/config');
+
 //const bodyParser = require('body-parser'); //DEPRECATED
 
-const url = 'mongodb+srv://user-admin:1234@clusternodejsbasiccours.gioks.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
+const url = config.bd_string; 
+
 //Opções padrão
 const options = {
     // reconnectTries: Number.MAX_VALUE,
